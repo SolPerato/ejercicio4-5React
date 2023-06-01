@@ -1,9 +1,12 @@
-import { ListGroup } from "react-bootstrap";
+import { Button, ListGroupItem } from "react-bootstrap";
 
-const Itemtarea = () => {
+const ItemTareas = ({propTarea, borrarTarea}) => {
     return (
-     <ListGroup.Item>ejemplo de tareas </ListGroup.Item>
+        <ListGroupItem className="d-flex justify-content-between">
+            {propTarea}
+            <Button variant="danger" onClick={()=>borrarTarea(propTarea)}>Borrar</Button>
+            </ListGroupItem>
     );
 };
 
-export default Itemtarea;
+export default ItemTareas;
